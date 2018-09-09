@@ -13,6 +13,8 @@ void printWifiStatus() {
     Serial.println("SSID: " + String(WiFi.SSID()));
     Serial.print("IP Address: ");
     Serial.println(WiFi.localIP());
+    Serial.print("RSSI: ");
+    Serial.println(WiFi.RSSI());
 }
 void startWiFi() {
     /* Kill existing connection */
