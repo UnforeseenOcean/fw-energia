@@ -23,7 +23,7 @@ void startWiFi() {
     /* Start new connection */
     WiFi.begin(ssid, pass);
     /* Wait for WiFi */
-    delay(2500);
+    while (WiFi.localIP() == INADDR_NONE) {}
     printWifiStatus();
 }
 
